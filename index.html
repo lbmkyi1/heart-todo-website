@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Todo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kitty-bg"></div>
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="logo"><i class="fas fa-heart"></i></div>
+            <nav>
+                <a href="#" class="nav-item active"><i class="fas fa-home"></i></a>
+                <a href="#" class="nav-item"><i class="fas fa-tasks"></i></a>
+                <a href="#" class="nav-item"><i class="fas fa-check"></i></a>
+            </nav>
+        </aside>
+        <main class="main">
+            <header>
+                <h1>Blue Heart - Todo List</h1>
+                <p id="date"></p>
+            </header>
+            
+            <div class="heart-window-container">
+                <div class="heart-window">
+                    <div class="heart-content">
+                        <div class="heart-header">
+                            <i class="fas fa-heart"></i>
+                            <span>New Task</span>
+                        </div>
+                        <textarea id="input" placeholder="Write something sweet..."></textarea>
+                        <button id="add"><i class="fas fa-plus"></i> Add to Heart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+                <span id="progressText">0% Complete</span>
+            </div>
+
+            <div class="filters">
+                <button class="filter-btn active" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Done</button>
+            </div>
+
+            <ul id="list"></ul>
+            
+            <div class="bottom-bar">
+                <span><span id="left">0</span> tasks left</span>
+                <button id="clear">Clear Completed</button>
+            </div>
+        </main>
+    </div>
+    <audio id="music" loop><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"></audio>
+    <script src="app.js"></script>
+</body>
+</html>
